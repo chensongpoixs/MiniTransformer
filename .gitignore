@@ -1,0 +1,7 @@
+/.idea
+/datasets/__pycache__
+/datasets/tokenizer/__pycache__
+/models/__pycache__
+/optimizer/__pycache__
+/trainer/__pycache__
+/utils/__pycache__
