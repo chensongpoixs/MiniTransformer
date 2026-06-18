@@ -1,5 +1,5 @@
 import torch
-from mt_dataset import subsequent_mask
+from .mt_dataset import subsequent_mask
 
 
 class Beam:

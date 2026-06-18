@@ -44,7 +44,7 @@ eos_idx = 3
 这些参数控制训练过程中的配置和训练策略。
 """
 # 训练时的批次大小。
-batch_size = 32
+batch_size = 40
 # 训练的总轮次。
 epoch_num = 300
 # 学习率（learning rate）。
@@ -71,8 +71,8 @@ dev_data_path = './data/json/dev.json'
 test_data_path = './data/json/test.json'
 
 model_path = './weights/transformer_model.pth'
-test_model_path = './run/train/exp4/weights/best_bleu_24.64.pth'
-
+# test_model_path = './run/train/exp4/weights/best_bleu_24.64.pth'
+test_model_path = './run/exp12/weights/best_bleu_10.90.pth'
 
 """
 设备配置

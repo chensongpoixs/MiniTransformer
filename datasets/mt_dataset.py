@@ -6,7 +6,11 @@ from torch.utils.data import Dataset
 from torch.nn.utils.rnn import pad_sequence
 import numpy    as np
 import json
-from tokenizer.tokenizer import english_tokenizer_load, chinese_tokenizer_load
+from  .tokenizer.tokenizer import english_tokenizer_load, chinese_tokenizer_load
+
+# import  tokenizer as tokenizer_load
+
+
 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -85,8 +89,8 @@ class MTDataset(Dataset):
             :param data_path: 数据集文件路径（json格式）
         """
         self.out_en_sent, self.out_cn_sent = self.get_dataset(data_path, sort=True)  # 获取并排序中英文句子
-        self.sp_eng = english_tokenizer_load()  # 加载英文分词器
-        self.sp_chn = chinese_tokenizer_load()  # 加载中文分词器
+        self.sp_eng =  english_tokenizer_load()  # 加载英文分词器
+        self.sp_chn =  chinese_tokenizer_load()  # 加载中文分词器
         self.PAD = self.sp_eng.pad_id()  # 获取PAD标记ID
         self.BOS = self.sp_eng.bos_id()  # 获取BOS标记ID（开始符）
         self.EOS = self.sp_eng.eos_id()  # 获取EOS标记ID（结束符）
